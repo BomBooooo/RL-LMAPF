@@ -7,7 +7,6 @@ import json
 import time
 import matplotlib.pyplot as plt
 from torch.utils.tensorboard import SummaryWriter
-import json
 
 
 def to_np(x):

@@ -11,13 +11,13 @@ def get_args_parser():
     parser.add_argument("--debug", default=False)
     parser.add_argument("--agent_name", default="RL-LMAPF")
     # eval
-    # parser.add_argument("--isEval", default=True, type=bool)
-    # parser.add_argument("--isLoad", default="model/Berlin_512.pth")
-    # parser.add_argument("--map_file", default="mapf-map-porcess/Berlin_1_256.map")
-    # train
-    parser.add_argument("--isEval", default=False, type=bool)
-    parser.add_argument("--isLoad", default=None)
+    parser.add_argument("--isEval", default=True, type=bool)
+    parser.add_argument("--isLoad", default="model/Berlin_512.pth")
     parser.add_argument("--map_file", default="mapf-map-porcess/Berlin_1_256.map")
+    # train
+    # parser.add_argument("--isEval", default=False, type=bool)
+    # parser.add_argument("--isLoad", default=None)
+    # parser.add_argument("--map_file", default="mapf-map-porcess/Berlin_1_256.map")
     # environment
     parser.add_argument("--env_name", default="GridMap")
     parser.add_argument("--time_limit", default=500)
@@ -40,7 +40,7 @@ def get_args_parser():
     parser.add_argument("--steps", default=100000)
     parser.add_argument("--log_every", default=100)
     parser.add_argument("--eval_every", default=2500)
-    parser.add_argument("--eval_episode_num", default=5)
+    parser.add_argument("--eval_episode_num", default=1)
     parser.add_argument("--device", default="cuda")
     parser.add_argument("--cuda_id", default="0")  #
     parser.add_argument("--dtype", default=torch.int32)
