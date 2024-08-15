@@ -5,7 +5,7 @@
 </div> 
 
 ## Abstract
-This paper proposes Real-time Large-scale Method for LMAPF (RL-LMAPF), a scalable and adaptive method. RL-LMAPF utilizes a fast distance cost map algorithm, leveraging GPU to compute the cost map (denoted as $h_{map}$) of all positions relative to the target point. This feature provides critical guidance for agent actions and dense rewards within the reinforcement learning environment, thereby accelerating the learning process. Agents share observations and communicate through a unified model, which streamlines decision-making and reduces computational load. Experiments demonstrate that RL-LMAPF can efficiently manage up to 4,096 agents simultaneously, with an average decision time of approximately 500 ms per step, significantly surpassing existing methods. 
+This paper proposes Real-time Large-scale Method for LMAPF (RL-LMAPF), a scalable and adaptive method. RL-LMAPF utilizes a fast distance cost map algorithm, leveraging GPU to compute the cost map (denoted as $h_{map}$) of all positions relative to the target point. This feature provides critical guidance for agent actions and dense rewards within the reinforcement learning environment, thereby accelerating the learning process. Agents share observations and communicate through a unified model, which streamlines decision-making and reduces computational load. Experiments demonstrate that RL-LMAPF can efficiently manage up to 4,096 agents simultaneously, with an average decision time of approximately 500 ms per step. 
 
 ## Installation:
 
