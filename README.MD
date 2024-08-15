@@ -25,7 +25,9 @@ To change the number of agents, the target position, and other parameters, modif
 
 If you want to train **RL-LMAPF** on your own map, modify the `read_map()` function in the `env/GridMap.py` file.
 
-All maps in the map folder `mapf-map-porcess` in this repository are from [movingai](https://movingai.com/benchmarks/mapf.html). Please indicate the reference if you need to use them.
+All maps in the map folder `mapf-map-porcess` in this repository are from [movingai](https://movingai.com/benchmarks/mapf.html). Please indicate the reference if you need to use them. Unreachable points in the map have been processed and can be used directly.
+
+The `model` folder contains pre-trained weights, and the naming convention is {map name}_{number of agents in the training environment}.
 
 
 <div style='display: none'>
