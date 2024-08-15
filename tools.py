@@ -90,45 +90,6 @@ class Logger:
         self._images = {}
         self._videos = {}
 
-    def save_env_metrics(self, step, metric, dir):
-        metrics_append = pd.DataFrame(metric, index=[0])
-        self.env_metrics = pd.concat(
-            [self.env_metrics.astype(metrics_append.dtypes), metrics_append],
-            ignore_index=True,
-        )
-        self.env_metrics.loc[len(self.env_metrics) - 1, "step"] = step
-        self.env_metrics.to_csv(
-            dir / "metrics.csv",
-            encoding="utf-8",
-        )
-        self.plot_result(self.env_metrics, dir)
-
-    @staticmethod
-    def plot_result(df, dir):
-        # 绘制DataFrame的所有列，每列一个子图
-        nrow = 3
-        ncol = 4
-        # 绘制DataFrame的所有列（除了作为横坐标的列），每列一个子图
-        fig, axes = plt.subplots(
-            nrow, ncol, figsize=(ncol * 4, nrow * 4), sharex=True, sharey=False
-        )
-        # 遍历除了横坐标列之外的所有列
-        n = 0
-        x_column = "step"
-        column = list(df.columns.drop(x_column))
-        for i in range(nrow):
-            for j in range(ncol):
-                ax = axes[i][j]
-                df.plot(x=x_column, y=column[n], ax=ax, title=column[n])
-                ax.set_ylabel(column[n])
-                n += 1
-                if n == len(column):
-                    break
-        # 调整子图之间的间距
-        plt.tight_layout()
-        plt.savefig(dir / "env_metrics.png")
-        plt.close()
-
 
 def convert(value, precision=32):
     value = np.array(value)

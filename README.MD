@@ -27,8 +27,11 @@ If you want to train **RL-LMAPF** on your own map, modify the `read_map()` funct
 
 All maps in the map folder `mapf-map-porcess` in this repository are from [movingai](https://movingai.com/benchmarks/mapf.html). Please indicate the reference if you need to use them.
 
+
+<div style='display: none'>
 ## Citation:
 
 ```bibtex
 
 ```
+</div>

@@ -167,7 +167,6 @@ class Trainer:
                 metrics["success_rate"] = info["success_rate"]
                 log_dict["throughput"] = metrics["finish"] / self.args.time_limit
                 [self.eval_logger.scalar(k, v) for k, v in log_dict.items()]
-                self.eval_logger.save_env_metrics(eval_step, metrics, self.args.evaldir)
                 self.eval_logger.write(desc="eval")
                 self.eval_logger.step += 1
                 r = round(metrics["reward"], 4)
