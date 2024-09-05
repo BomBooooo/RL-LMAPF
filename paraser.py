@@ -4,7 +4,7 @@ import torch
 
 def get_args_parser():
     parser = argparse.ArgumentParser(
-        "Dreamer training and evaluation script for Fulfillment system environment",
+        "RL-LMAPF training and evaluation script for grid environment",
         add_help=False,
     )
     parser.add_argument("--info", default="train")
